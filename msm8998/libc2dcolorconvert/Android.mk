@@ -12,7 +12,6 @@ LOCAL_CFLAGS += -Wno-implicit-fallthrough
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/adreno
-LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/qcom/display
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 endif
@@ -29,5 +28,5 @@ ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 endif
 
-LOCAL_HEADER_LIBRARIES += libhardware_headers
+LOCAL_HEADER_LIBRARIES += display_headers libhardware_headers
 include $(BUILD_SHARED_LIBRARY)
