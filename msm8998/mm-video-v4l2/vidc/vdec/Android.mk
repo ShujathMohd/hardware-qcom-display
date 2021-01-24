@@ -116,6 +116,7 @@ LOCAL_CFLAGS                    := $(libmm-vdec-def) -Werror
 LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(libmm-vdec-add-dep)
 LOCAL_HEADER_LIBRARIES          := \
+    display_headers \
     libnativebase_headers \
     libhardware_headers \
     media_plugin_headers \
